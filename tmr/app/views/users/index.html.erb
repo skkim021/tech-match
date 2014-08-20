@@ -1,0 +1,13 @@
+<h1>Hello users! Please sign in!</h1>
+
+<th>Email</th>
+<th>Password</th>
+<th>Remember Token</th>
+<th colspan="3"></th>
+
+
+<body>
+<%= @users.each do |user| %>
+<%= user.email %><br>
+<%= user.password %><br>
+<% end %>
