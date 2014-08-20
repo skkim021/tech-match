@@ -11,11 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20140820020654) do
+=======
+ActiveRecord::Schema.define(version: 0) do
+>>>>>>> cac90be89fd7070cb5d052600ea104acdaaf053d
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+<<<<<<< HEAD
   create_table "users", force: true do |t|
     t.string   "name"
     t.string   "email"
@@ -24,4 +29,6 @@ ActiveRecord::Schema.define(version: 20140820020654) do
     t.datetime "updated_at"
   end
 
+=======
+>>>>>>> cac90be89fd7070cb5d052600ea104acdaaf053d
 end
