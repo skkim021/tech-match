@@ -9,9 +9,7 @@ class User < ActiveRecord::Base
 			format: { with: VALID_EMAIL_REGEX },
 			uniqueness: { case_sensitive: false}
 	validates :password, presence: true
-	validates :name, presence: true
-	validates :photo, presence: true
-	validates :location, presence: true
+	validates :name, presence: true 
 
 	has_secure_password
 	validates :password, length: {minimum: 6}
@@ -29,7 +27,5 @@ class User < ActiveRecord::Base
 		def create_remember_token
 			self.remember_token = User.digest(User.new_remember_token)
 		end
-
-  validates :name, presence: true
 end
  

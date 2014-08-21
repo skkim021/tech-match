@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  root 'users#index'
+  # root 'users#index'
+  root "sessions#new"
+
   get 'users' => 'users#index'
   get 'users/new' => 'users#new', as: :new_user
   post 'users' => 'users#create'
@@ -7,6 +9,16 @@ Rails.application.routes.draw do
   get 'users/:id/edit' => 'users#edit', as: :edit_user 
   patch 'users/:id' => 'users#update', as: :show_user
   delete 'users/:id' => 'users#destroy', as: :delete_user
+  
+  post 'signup' => 'users#create'
+  
+  get 'signup' => "users#new", as: :sign_up
+  
+  get 'signin' => 'sessions#new', as: :sign_in
+  post 'signin' => 'sessions#create'
+  delete 'signout' => 'sessions#destroy', as: :sign_out
+  resources :sessions, only: [:new, :create, :destroy]
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.
