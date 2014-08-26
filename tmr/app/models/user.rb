@@ -4,15 +4,16 @@ class User < ActiveRecord::Base
 	VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(?:\.[a-z\d\-]+)*\.[a-z]+\z/i
 
 	before_save {self.email = email.downcase}
-	# Validates for email being filled
-	validates :email, presence: :true,
-			format: { with: VALID_EMAIL_REGEX },
-			uniqueness: { case_sensitive: false}
-	validates :password, presence: true
-	validates :name, presence: true 
+	validates :name, presence: true
 
-	has_secure_password
-	validates :password, length: {minimum: 6}
+	# Validates for email being filled
+	validates :email, presence: true,
+			format: { with: VALID_EMAIL_REGEX },
+			uniqueness: { case_sensitive: false }
+
+	# has_secure_password
+	validates :password_digest, presence: true 
+	validates :password_digest, length: {minimum: 6}
 	before_create :create_remember_token
 
 	def User.new_remember_token
