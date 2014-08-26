@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   delete 'signout' => 'sessions#destroy', as: :sign_out
   resources :sessions, only: [:new, :create, :destroy]
 
+  resources :jobs, only: [:index]
  # root 'users#index'
   
  #  get 'signup' => "users#new", as: :sign_up
