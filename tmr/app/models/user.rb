@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
 			format: { with: VALID_EMAIL_REGEX },
 			uniqueness: { case_sensitive: false }
 
-	# has_secure_password
+	has_secure_password
 	validates :password_digest, presence: true 
 	validates :password_digest, length: {minimum: 6}
 	before_create :create_remember_token
