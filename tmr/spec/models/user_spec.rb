@@ -6,7 +6,7 @@ describe 'User' do
 		@valid_attributes = {
 			name: "Angela",
 			email: "angelal4@uci.edu",
-			password_digest: "Lots and lots of text.",
+			password: "Lots and lots of text.",
 		}
 	end
 
@@ -65,14 +65,14 @@ describe 'User' do
 		# Passwords
 		context 'when password is missing' do
 			it 'it is not valid' do
-				user = User.new(@valid_attributes.merge(password_digest: nil))
+				user = User.new(@valid_attributes.merge(password: nil))
 				expect(user).not_to be_valid
 			end
 		end
 
 		context 'when password is less than 6 characters long' do
 			it 'it is not valid' do
-				user = User.new(@valid_attributes.merge(password_digest: "12345"))
+				user = User.new(@valid_attributes.merge(password: "12345"))
 				expect(user).not_to be_valid
 			end
 		end
