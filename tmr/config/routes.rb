@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
 
   resources :jobs, only: [:index]
+  resources :profiles, only: [:index]
  # root 'users#index'
   
  #  get 'signup' => "users#new", as: :sign_up
