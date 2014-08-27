@@ -1,0 +1,57 @@
+
+
+html { 
+  background: url("http://cdn1.tnwcdn.com/wp-content/blogs.dir/1/files/2013/12/hipster-millennial-phone.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#title {
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 1000px;
+
+}
+
+.firstShow {
+	position: fixed;
+	z-index: 1;
+    border-width: 2px;
+    border-radius: 20px;
+  	height: 600px; 
+  	width: 400px; 
+    background-color: rgba(255,255,255, 0.5);
+    margin-left: 420px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+#block {
+	margin-top: 175px;
+	margin-left: 20px;
+	margin-right: 20px;
+	font-size: 20px;
+	font-family: 'Abel', sans-serif;
+}
+
+hr {
+  width: 90%;
+}
+
+
+#navlist li{
+display: inline;
+list-style-type: none;
+padding-right: 20px;
+float:right;
+padding:3px;
+margin:3px;
+font-size: 25px;
+font-family: 'Abel', sans-serif;
+}
+
+
+
+
+

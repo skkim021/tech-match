@@ -1,3 +1,6 @@
+<link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
+
 <div class="row">
   <div class="span6 offset3">
     <%= form_for(@user, url: sign_up_path) do |f| %>
@@ -12,7 +15,8 @@
           </ul>
         </div>
       <% end %>
-
+<div class="firstShow">      
+<div id="block">
       <div class="center">
       <p><%= f.label :name %><p>
       <p class="new_input"><%= f.text_field :name %><br/></p>
@@ -29,4 +33,6 @@
 
     <div class="center"> <%= link_to "Or Sign In", signin_path %> </div>
   </div>
+</div>
+</div>
 </div>
