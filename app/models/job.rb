@@ -1,13 +1,13 @@
 class Job < ActiveRecord::Base
 BASE_URI = "http://service.dice.com/api/rest/jobsearch/v1/simple.json?text="
 
-	def search_title
-		uri = BASE_URI + title.gsub(' ','+')
+	def search_index
+		uri = BASE_URI
 		@response = HTTParty.get uri
 		return @response
 	end
 
-	def adv_search
+	def adv_search title,state,zip
 		uri = BASE_URI + title.gsub(' ','+') + "&state=" + state.gsub(' ','+') + "&city=" + zip.gsub(' ','+')
 		puts uri
 		@response = HTTParty.get uri

@@ -49,11 +49,11 @@ end
 		end
 	end
 
-private
-  	def user_params
+	private
+	  	def user_params
 			params.require(:user).permit(:name, :email, :password, :password_confirmation)
 		end
-		
+			
 		def find_user
 			@user = User.find(params[:id])
 		end
@@ -62,4 +62,4 @@ private
 			find_user
 			redirect_to(current_user) unless current_user?(@user)
 		end
-	end
+end

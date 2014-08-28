@@ -4,7 +4,9 @@ class JobsController < ApplicationController
     if signed_in?
       # @jobs = Job.all
       @job = Job.new
-      @jobs = Job.last.adv_search
+      @jobs = Job.first.adv_search(params[:title],params[:state],params[:zip])
+      @path = job_path(params)
+      @title = params[:title]
     else
       render 'users/first'
     end
@@ -18,13 +20,18 @@ class JobsController < ApplicationController
   	end
   end
 
+  def show
+
+  end
+
   def create
     if signed_in?
       @job = Job.new(job_params)
 
       if @job.save
         @jobs = Job.all
-        redirect_to jobs_path
+        # redirect_to jobs_path
+        redirect_to job_path(job_params)
       else
         redirect_to 'new'
       end
