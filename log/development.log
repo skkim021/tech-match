@@ -18986,3 +18986,489 @@ Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-08-27 18:26:34 -0700
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-27 18:26:34 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-28 15:09:46 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.1.4) lib/active_record/migration.rb:389:in `check_pending!'
+  activerecord (4.1.4) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  thin (1.6.2) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.2) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.2) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.2) lib/thin/connection.rb:53:in `process'
+  thin (1.6.2) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.2) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.2) lib/thin/server.rb:162:in `start'
+  rack (1.5.2) lib/rack/handler/thin.rb:16:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.1.4) lib/rails/commands/server.rb:69:in `start'
+  railties (4.1.4) lib/rails/commands/commands_tasks.rb:81:in `block in server'
+  railties (4.1.4) lib/rails/commands/commands_tasks.rb:76:in `tap'
+  railties (4.1.4) lib/rails/commands/commands_tasks.rb:76:in `server'
+  railties (4.1.4) lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+  railties (4.1.4) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:8:in `require'
+  bin/rails:8:in `<top (required)>'
+  spring (1.1.3) lib/spring/client/rails.rb:27:in `load'
+  spring (1.1.3) lib/spring/client/rails.rb:27:in `call'
+  spring (1.1.3) lib/spring/client/command.rb:7:in `call'
+  spring (1.1.3) lib/spring/client.rb:26:in `run'
+  spring (1.1.3) bin/spring:48:in `<top (required)>'
+  spring (1.1.3) lib/spring/binstub.rb:11:in `load'
+  spring (1.1.3) lib/spring/binstub.rb:11:in `<top (required)>'
+  bin/spring:16:in `require'
+  bin/spring:16:in `<top (required)>'
+  bin/rails:3:in `load'
+  bin/rails:3:in `<main>'
+
+
+  Rendered /home/laurie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /home/laurie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/laurie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/laurie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateJobs (20140827190147)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (55.8ms)[0m  [1mCREATE TABLE "jobs" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140827190147"]]
+  [1m[36m (16.1ms)[0m  [1mCOMMIT[0m
+Migrating to AddSearchIndexToJob (20140828004133)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "jobs" ADD COLUMN "search" character varying(255)[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140828004133"]]
+  [1m[36m (6.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-28 15:10:10 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#first as HTML
+  Rendered users/first.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 2445ms (Views: 2436.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/first.css?body=1" for 127.0.0.1 at 2014-08-28 15:10:13 -0700
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-08-28 15:10:13 -0700
+
+
+Started GET "/assets/profiles.css?body=1" for 127.0.0.1 at 2014-08-28 15:10:13 -0700
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-08-28 15:10:13 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-08-28 15:10:13 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-28 15:10:13 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-28 15:10:13 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-28 15:10:13 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-28 15:10:13 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-08-28 15:10:13 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-08-28 15:10:13 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-08-28 15:10:13 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-08-28 15:10:13 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-08-28 15:10:13 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-08-28 15:10:13 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-08-28 15:10:13 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-08-28 15:10:13 -0700
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-08-28 15:10:13 -0700
+
+
+Started GET "/assets/profiles.js?body=1" for 127.0.0.1 at 2014-08-28 15:10:13 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-08-28 15:10:13 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-08-28 15:10:13 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-08-28 15:10:13 -0700
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-08-28 15:10:13 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-08-28 15:10:13 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-08-28 15:10:13 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-08-28 15:10:13 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-08-28 15:10:13 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-28 15:10:13 -0700
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-08-28 15:10:28 -0700
+Processing by UsersController#new as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."remember_token" = '069a11fb3431a9ec3fa4e2576394c3600a240e64' LIMIT 1
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 37ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-08-28 15:10:28 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."remember_token" = '069a11fb3431a9ec3fa4e2576394c3600a240e64' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 20ms (Views: 15.9ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/signout" for 127.0.0.1 at 2014-08-28 15:10:30 -0700
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"YO+elOUYYLNn88iWSR9/TlB3fUVKctrheCwfhsS/aFw="}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."remember_token" = '069a11fb3431a9ec3fa4e2576394c3600a240e64' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "users" SET "remember_token" = $1, "updated_at" = $2 WHERE "users"."id" = 1  [["remember_token", "d74ba42c2d4a598d4597c00305449d9ec52cc2d3"], ["updated_at", "2014-08-28 22:10:30.839897"]]
+  [1m[36m (21.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/signin
+Completed 302 Found in 32ms (ActiveRecord: 22.4ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2014-08-28 15:10:30 -0700
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered sessions/new.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 26ms (Views: 24.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-08-28 15:10:30 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-08-28 15:10:30 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-28 15:10:30 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-28 15:10:30 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-28 15:10:30 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-08-28 15:10:30 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-08-28 15:10:30 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-08-28 15:10:30 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-08-28 15:10:30 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-08-28 15:10:30 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-08-28 15:10:30 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-08-28 15:10:30 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-08-28 15:10:31 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-08-28 15:10:31 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-08-28 15:10:31 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-08-28 15:10:31 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-08-28 15:10:31 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-08-28 15:10:31 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-08-28 15:10:31 -0700
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-08-28 15:10:31 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-08-28 15:10:31 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-28 15:10:31 -0700
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-08-28 15:10:48 -0700
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered users/new.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 29ms (Views: 26.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/signup" for 127.0.0.1 at 2014-08-28 15:11:32 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YO+elOUYYLNn88iWSR9/TlB3fUVKctrheCwfhsS/aFw=", "user"=>{"name"=>"laurie ", "email"=>"rowrowel331@yahoo.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  Rendered user_mailer/welcome_email.html.erb (0.3ms)
+
+UserMailer#welcome_email: processed outbound mail in 9.8ms
+
+Sent mail to rowrowel331@yahoo.com (1679.2ms)
+Date: Thu, 28 Aug 2014 15:11:32 -0700
+From: WeDoTechMatch@gmail.com
+To: rowrowel331@yahoo.com
+Message-ID: <53ffa914874ec_26e0c0333468760@laurie-SVE15114FXS.mail>
+Subject: Welcome to Tech Match!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+  </head>
+  <body>
+    <h2><center>Welcome to Tech-Match,  rowrowel331@yahoo.com!</center></h2>
+    <h3 color="black">
+      You have successfully signed up to Tech-Match.com!
+    </h3>
+
+    <h3 color="black">Thanks for joining and have a great day!</h3>
+  </body>
+</html>
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE LOWER("users"."email") = LOWER('rowrowel331@yahoo.com') LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["created_at", "2014-08-28 22:11:34.250397"], ["email", "rowrowel331@yahoo.com"], ["name", "laurie "], ["password_digest", "$2a$10$HqMgezE8NO4EVYYq4RLiuOTGkwV49r/p7.urpTvQWpY5eqHDh1HGy"], ["remember_token", "d05d03b14026c0ae21cbeb502c45672fff9f7345"], ["updated_at", "2014-08-28 22:11:34.250397"]]
+  [1m[36m (60.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "remember_token" = $1, "updated_at" = $2 WHERE "users"."id" = 2[0m  [["remember_token", "6102659ba4ca98980695c7c86a14d41bd75959c5"], ["updated_at", "2014-08-28 22:11:34.316237"]]
+  [1m[35m (70.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 1928ms (ActiveRecord: 133.7ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-08-28 15:11:34 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."remember_token" = '6102659ba4ca98980695c7c86a14d41bd75959c5' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 19ms (Views: 15.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-08-28 15:11:34 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-08-28 15:11:34 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-28 15:11:34 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-28 15:11:34 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-28 15:11:34 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-08-28 15:11:34 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-08-28 15:11:34 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-08-28 15:11:34 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-08-28 15:11:34 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-08-28 15:11:34 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-08-28 15:11:34 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-08-28 15:11:34 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-08-28 15:11:34 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-08-28 15:11:34 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-08-28 15:11:34 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-08-28 15:11:34 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-08-28 15:11:34 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-08-28 15:11:34 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-08-28 15:11:34 -0700
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-08-28 15:11:34 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-08-28 15:11:34 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-28 15:11:34 -0700
+
+
+Started DELETE "/signout" for 127.0.0.1 at 2014-08-28 15:12:05 -0700
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"YO+elOUYYLNn88iWSR9/TlB3fUVKctrheCwfhsS/aFw="}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."remember_token" = '6102659ba4ca98980695c7c86a14d41bd75959c5' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  UPDATE "users" SET "remember_token" = $1, "updated_at" = $2 WHERE "users"."id" = 2  [["remember_token", "149d17fc8881bc8557416a2a9a9a08b8ce782557"], ["updated_at", "2014-08-28 22:12:05.686858"]]
+  [1m[36m (26.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/signin
+Completed 302 Found in 33ms (ActiveRecord: 27.6ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2014-08-28 15:12:05 -0700
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered sessions/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-08-28 15:12:05 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-08-28 15:12:05 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-28 15:12:05 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-28 15:12:05 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-28 15:12:05 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-28 15:12:05 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-08-28 15:12:05 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-08-28 15:12:05 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-08-28 15:12:05 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-08-28 15:12:05 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-08-28 15:12:05 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-08-28 15:12:05 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-08-28 15:12:05 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-08-28 15:12:05 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-08-28 15:12:05 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-08-28 15:12:05 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-08-28 15:12:05 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-08-28 15:12:05 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-08-28 15:12:05 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-08-28 15:12:05 -0700
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-08-28 15:12:05 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-08-28 15:12:05 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-28 15:12:05 -0700

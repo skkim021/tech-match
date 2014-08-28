@@ -20,6 +20,7 @@ end
 
 def create
 	@user = User.new(user_params)
+	UserMailer.welcome_email(@user.email).deliver
 		
 	  if @user.save
 	    sign_in @user
