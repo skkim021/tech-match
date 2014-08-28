@@ -1,30 +1,43 @@
 class JobsController < ApplicationController
 
   def index
-    # @jobs = Job.all
-    @response = Job.new.index
+    if signed_in?
+      # @jobs = Job.all
+      @jobs = Job.last.search_title
+    else
+      render 'users/first'
+    end
   end
 
-  def show
-    @jobs = Job.last.search
-  end
+  # def show
+  #   if signed_in?
+  #     # @job = Job.last.search
+  #     @job = Job.find(params[:id]).search
+  #   else
+  #     render 'users/first'
+  #   end
+  # end
 
   def new
   	if signed_in?
-  		@response = Job.new
+  		@job = Job.new
   	else
   		render 'users/first'
   	end
   end
 
   def create
-    @response = Job.new(job_params)
+    if signed_in?
+      @job = Job.new(job_params)
 
-    if @response.save
-      @jobs = Job.all
-      redirect_to job_path
+      if @job.save
+        @jobs = Job.all
+        redirect_to 
+      else
+        redirect_to jobs_path
+      end
     else
-      render :new
+      render 'users/first'
     end
   end
 
