@@ -1,5 +1,11 @@
 source 'https://rubygems.org'
 
+# For heroku
+gem 'rails_12factor', group: :production
+ruby '2.1.2'
+# For production
+gem 'thin', group: :production
+
 gem 'bcrypt-ruby', '3.1.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
