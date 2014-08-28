@@ -1,11 +1,15 @@
 class Job < ActiveRecord::Base
-BASE_URI = "http://service.dice.com/api/rest/jobsearch/v1/simple.json?"
+BASE_URI = "http://service.dice.com/api/rest/jobsearch/v1/simple.json?text="
 
-	def initialize
-		return @response = HTTParty.get BASE_URI
+	def index
+		uri = BASE_URI + "manager"
+		@response = HTTParty.get uri
+		return @response
 	end
 
-	def search_profile
+	def search
+		uri = BASE_URI + "java"
+		@response = HTTParty.get uri
 		return @response
 	end
 
