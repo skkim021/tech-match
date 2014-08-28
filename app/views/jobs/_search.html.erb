@@ -1,0 +1,8 @@
+<%= form_for @job do |f| %>
+
+	<p>Search by Job Title: <%= f.text_field :title %></p>
+	<%= f.hidden_field :state %>
+	<%= f.hidden_field :zip %>
+
+	<%= f.submit "Search" %>
+<% end %>

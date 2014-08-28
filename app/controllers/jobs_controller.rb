@@ -3,20 +3,12 @@ class JobsController < ApplicationController
   def index
     if signed_in?
       # @jobs = Job.all
-      @jobs = Job.last.search_title
+      @job = Job.new
+      @jobs = Job.last.adv_search
     else
       render 'users/first'
     end
   end
-
-  # def show
-  #   if signed_in?
-  #     # @job = Job.last.search
-  #     @job = Job.find(params[:id]).search
-  #   else
-  #     render 'users/first'
-  #   end
-  # end
 
   def new
   	if signed_in?
@@ -32,9 +24,9 @@ class JobsController < ApplicationController
 
       if @job.save
         @jobs = Job.all
-        redirect_to 
-      else
         redirect_to jobs_path
+      else
+        redirect_to 'new'
       end
     else
       render 'users/first'
@@ -43,6 +35,6 @@ class JobsController < ApplicationController
 
   private
     def job_params
-      params.require(:job).permit(:search)
+      params.require(:job).permit(:title, :state, :zip)
     end
 end
