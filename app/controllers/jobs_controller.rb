@@ -1,39 +1,40 @@
 class JobsController < ApplicationController
 
   def index
+    fill_if_empty
     if signed_in?
-      # @jobs = Job.all
-      @job = Job.new
-      @jobs = Job.first.adv_search(params[:title],params[:state],params[:zip])
-      @path = job_path(params)
-      @title = params[:title]
+      @job = Job.first
+      @response = @job.search_index
     else
       render 'users/first'
     end
   end
 
-  def new
+  def show
+    fill_if_empty
+    @job = Job.first
+    @response = @job.adv_search
+  end
+
+  def edit
+    fill_if_empty
   	if signed_in?
-  		@job = Job.new
+  		@job = Job.first
   	else
   		render 'users/first'
   	end
   end
 
-  def show
-
-  end
-
-  def create
+  def update
+    fill_if_empty
     if signed_in?
-      @job = Job.new(job_params)
-
-      if @job.save
-        @jobs = Job.all
-        # redirect_to jobs_path
-        redirect_to job_path(job_params)
+      @job = Job.first
+      puts "update"
+      
+      if @job.update_attributes(job_params)
+        redirect_to show_job_path
       else
-        redirect_to 'new'
+        redirect_to 'edit'
       end
     else
       render 'users/first'
@@ -43,5 +44,11 @@ class JobsController < ApplicationController
   private
     def job_params
       params.require(:job).permit(:title, :state, :zip)
+    end
+
+    def fill_if_empty
+      if Job.first.nil?
+        Job.create(title:"", state:"", zip:"")
+      end
     end
 end
