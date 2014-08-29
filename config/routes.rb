@@ -1,13 +1,5 @@
 Rails.application.routes.draw do
   # # root 'users#index'
-
-# /////////////// FACEBOOK ////////////////////////////////////////////  
-match 'auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
-match 'auth/failure', to: redirect('/'), via: [:get, :post]
-match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get, :post]
- # /////////////////////////////////////////////////////////////////////
-
-
   root "users#first", as: :first
   
   get 'users' => 'users#index'
@@ -24,40 +16,10 @@ match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get, :post]
   get 'signin' => 'sessions#new', as: :sign_in
   post 'signin' => 'sessions#create'
   delete 'signout' => 'sessions#destroy', as: :sign_out
-
   resources :sessions, only: [:new, :create, :destroy]
+
   resources :jobs, only: [:index, :new, :create, :show]
   resources :profiles, only: [:index]
-
-
-# /////////////// FACEBOOK ////////////////////////////////////////////  
-root 'items#index'
-get 'items' => 'items#index'
-get 'items/new' => 'items#new'
-post 'items' => 'items#create'
-get 'items/:id' => 'items#show', as: :item
-get 'items/:id/edit' => 'items#edit', as: :edit_item
-patch 'items/:id' => 'items#update'
-delete 'items/:id' => 'items#destroy', as: :delete_item
- # /////////////////////////////////////////////////////////////////////
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
  # root 'users#index'
   
  #  get 'signup' => "users#new", as: :sign_up
