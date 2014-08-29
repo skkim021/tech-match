@@ -1,1 +1,18 @@
-helllo edit.html.erb
+<div id="block">
+      <div class="center">
+      <p><%= f.label :name %><p>
+      <p class="new_input"><%= f.text_field :name %><br/></p>
+      <p><%= f.label :email %></p>
+      <p class="new_input"><%= f.text_field :email %><br/></p>
+      <p><%= f.label :password %></p>
+      <p class="new_input"><%= f.password_field :password %><br/></p>
+      <p><%= f.label :password_confirmation %></p>
+      <p class="new_input"><%= f.password_field :password_confirmation %><br/></p>
+      <p class="center"><%= f.submit "Update yourself", class: "btn btn-large btn-primary" %></p>
+
+      </div>
+    <% end %>
+
+    <p class="center"><%= link_to "Cancel", @user %></p>
+
+</div>
