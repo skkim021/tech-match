@@ -3,13 +3,16 @@
 
 
 
-<div id="navcontainer">
+<img class="logo" src="http://i.imgur.com/M1CKa09.png" height="150" width="150">
+
+
+<!-- <div id="navcontainer">
 <ul id="navlist">
 <li id="active"><a href="#" id="current">blah1</a></li>
 <li><a href="#">blah2</a></li>
 <li><a href="#">blah3</a></li>
 </ul>
-</div>
+</div> -->
 
 <div class="firstShow">
 		<div id="block">
@@ -29,5 +32,19 @@
       </div>
   		</div>
       <hr/>
+<!-- ////////////////// FACEBOOK /////////////////////////////////////// -->
+      <div id="user-widget">
+    <% if current_user %>
+    Welcome <strong><%= current_user.name %></strong>!
+    <%= link_to "Sign out", signout_path, id: "sign_out" %>
+    <% else %>
+    <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
+    <% end %>
+    </div>
+    <% if current_user %>
+    <%= current_user.info %>
+    <% end %>
+<!-- ////////////////// FACEBOOK /////////////////////////////////////// -->
+
 </div>
   

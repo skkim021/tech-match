@@ -54,3 +54,6 @@ end
 # gem 'debugger', group: [:development, :test]
 
 gem 'httparty', '0.11.0'
+
+# FACEBOOK LOGIN
+gem 'omniauth-facebook'

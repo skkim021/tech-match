@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
 
+
 # Constant that validates for email @ and .com
 	VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(?:\.[a-z\d\-]+)*\.[a-z]+\z/i
 
