@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  # # root 'users#index'
+  # Root
   root "users#first", as: :first
   
+  # Users
   get 'users' => 'users#index'
   get 'signup' => "users#new", as: :sign_up
   # get 'users/new' => 'users#new', as: :new_user
@@ -13,17 +14,25 @@ Rails.application.routes.draw do
   
   post 'signup' => 'users#create'
   
+  # Sessions
   get 'signin' => 'sessions#new', as: :sign_in
   post 'signin' => 'sessions#create'
   delete 'signout' => 'sessions#destroy', as: :sign_out
   resources :sessions, only: [:new, :create, :destroy]
 
+  # Jobs
   get 'jobs/results' => 'jobs#show', as: :show_job
   get 'jobs/search' => 'jobs#edit', as: :edit_job
   resources :jobs, only: [:index, :update]
 
+  # Profiles
   resources :profiles, only: [:index]
   get 'profiles/:name' => 'profiles#show', as: :profile
+ 
+  # Tests
+  resources :tests
+
+
  # root 'users#index'
   
  #  get 'signup' => "users#new", as: :sign_up

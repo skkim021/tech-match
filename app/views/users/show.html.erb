@@ -1,8 +1,10 @@
-helloooooooooooooooooo Welcome to TECH.MATCH!! 
+<div class="firstShow">
 
+	<p> Welcome to TECH.MATCH!!</p> 
 
-<h1><%= @user.email %></h1>
-<p><%= link_to "Edit", edit_user_path %></p>
-<p><%= link_to 'Delete Your Account', delete_user_path, method: :delete, data: { confirm: 'Are you sure?' } %></p>
-<p><%= link_to "See Jobs Close To Me", jobs_path %></p>
-<p><%= link_to "Sign Out", sign_out_path , method: "delete" %><p> 
+	<h1><%= @user.email %></h1>
+	<p><%= link_to "Edit", edit_user_path %></p>
+	<p><%= link_to 'Delete Your Account', delete_user_path, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+	<p><%= link_to "See Jobs Close To Me", jobs_path %></p>
+	<p><%= link_to "Sign Out", sign_out_path , method: "delete" %></p> 
+</div>
