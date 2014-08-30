@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
 
 	# Validates password
 
-	# has_secure_password
+	has_secure_password
 	# validates :password_digest, presence: true 
 	# validates :password_digest, length: {minimum: 6}
 

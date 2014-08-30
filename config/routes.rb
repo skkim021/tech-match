@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   match 'auth/:provider/callback', to: 'auths#create', via: [:get, :post]
   match 'auth/failure', to: redirect('/'), via: [:get, :post]
   match 'signout', to: 'auths#destroy', as: 'signout', via: [:get, :post]
-
 # ///// Facebook /////
 
   # Root
