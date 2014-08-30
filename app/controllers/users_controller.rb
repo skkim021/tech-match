@@ -3,9 +3,9 @@ before_action :find_user, only: [:show, :edit, :update, :destroy]
 before_action :signed_in_user, only: [:index, :show, :edit, :update, :destroy]
 before_action :correct_user, only: [:show, :edit, :update, :destroy, :index]
 
-# def index
-# 	@users = User.all
-# end
+def index
+	@users = User.all
+end
 
 def show
 end 
