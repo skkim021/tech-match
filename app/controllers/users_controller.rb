@@ -44,7 +44,7 @@ end
 
 	def destroy
 		if @user.destroy
-			redirect_to root_url
+			render 'users/first'
 		else
 			render 'show'
 		end
