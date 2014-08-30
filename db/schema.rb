@@ -11,9 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
 ActiveRecord::Schema.define(version: 20140829225635) do
-
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,15 +36,12 @@ ActiveRecord::Schema.define(version: 20140829225635) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "remember_token"
-<<<<<<< HEAD
+    t.string   "result"
     t.string   "provider"
     t.string   "uid"
     t.string   "oauth_token"
     t.datetime "oauth_expires_at"
     t.json     "info"
-=======
-    t.string   "result"
->>>>>>> ce95ec2bf4b94d9e20ffb8bbc04c35f283fecd05
   end
 
   add_index "users", ["remember_token"], name: "index_users_on_remember_token", using: :btree
