@@ -19,7 +19,7 @@ class SessionsController < ApplicationController
 
   def destroy
     sign_out
-    redirect_to sign_in_path
+    render 'users/first'
   end
 end
 
