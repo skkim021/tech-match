@@ -1,7 +1,7 @@
 <%= form_for @job do |f| %>
 	<h1>Advanced Search</h1>
-	<p>Job Title: <%= f.text_field :title, :value => "" %></p>
-	<p>State: <%= f.text_field :state, :value => "" %></p>
-	<p>Zip Code: <%= f.text_field :zip, :value => "" %></p>
+	<p>Job Title: <%= f.text_field :title, value: "" %></p>
+	<p>State: <%= f.text_field :state, value: "" %></p>
+	<p>Zip Code: <%= f.text_field :zip, value: "" %></p>
 	<%= f.submit "Search" %>
 <% end %>

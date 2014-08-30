@@ -34,21 +34,21 @@ def edit
 	@user = User.find(params[:id])
 end
 
-	def update
+def update
 	if @user.update_attributes(user_params)
-			redirect_to @user
-		else
-			render 'edit'
-		end
+		redirect_to @user
+	else
+		render 'edit'
 	end
+end
 
-	def destroy
-		if @user.destroy
-			render 'users/first'
-		else
-			render 'show'
-		end
+def destroy
+	if @user.destroy
+		render 'users/first'
+	else
+		render 'show'
 	end
+end
 
 
 private
