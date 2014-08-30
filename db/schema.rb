@@ -42,6 +42,11 @@ ActiveRecord::Schema.define(version: 20140830221024) do
     t.datetime "updated_at"
     t.string   "remember_token"
     t.string   "result"
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "oauth_token"
+    t.datetime "oauth_expires_at"
+    t.json     "info"
   end
 
   add_index "users", ["remember_token"], name: "index_users_on_remember_token", using: :btree

@@ -13,7 +13,7 @@ html {
 	font-size: 1000px;
 
 }
-
+@media screen and (min-width: 650px){
 .firstShow {
 	position: fixed;
 	z-index: 1;
@@ -25,6 +25,7 @@ html {
     margin-left: 420px;
     margin-top: 50px;
     text-align: center;
+    }
 }
 
 #block {
@@ -51,7 +52,20 @@ font-size: 25px;
 font-family: 'Abel', sans-serif;
 }
 
+.prof_pic {
+  height: 100px;
+  width: 100px;
+  border-radius: 60px;
 
+}
+
+#logo1 {
+  float: left;
+  border-top-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  box-shadow: 10px 10px 5px ;
+  opacity: .8;
+}
 
 
 
