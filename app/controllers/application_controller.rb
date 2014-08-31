@@ -8,10 +8,10 @@ include SessionsHelper
 
 # ///// Facebook ////
 private
-  def current_userf
-    @current_userf ||= User.find(session[:user_id]) if session[:user_id]
-  end
-  helper_method :current_userf
+  # def current_userf
+  #   @current_userf ||= User.find(session[:user_id]) if session[:user_id]
+  # end
+  # helper_method :current_userf
 
 
 # ///// Facebook ////

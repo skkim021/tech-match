@@ -2,7 +2,11 @@ class SessionsController < ApplicationController
 
   def new
     if signed_in?
-      redirect_to current_user
+      if current_user
+        redirect_to current_user
+      else
+        redirect_to current_userf
+      end
     end
   end
 
@@ -19,7 +23,7 @@ class SessionsController < ApplicationController
 
   def destroy
     sign_out
-    render 'users/first'
+    # render 'users/first'
   end
 end
 

@@ -14,7 +14,7 @@ module SessionsHelper
   end
 
   def signed_in?
-    !current_user.nil?
+    !current_user.nil? || !current_userf.nil?
   end
 
   def current_user=(user)
@@ -30,10 +30,28 @@ module SessionsHelper
     user == current_user
   end
 
+  # ///// Facebook ////
+  def current_userf
+    @current_userf ||= User.find(session[:user_id]) if session[:user_id]
+  end
+
+  def current_userf?(user)
+    user == current_userf
+  end
+
+  def fb_signin?
+    !current_userf.nil?
+  end
+
   def sign_out
-    current_user.update_attribute(:remember_token,
-                                  User.digest(User.new_remember_token))
-    cookies.delete(:remember_token)
-    self.current_user = nil
+    if fb_signin?
+      redirect_to signout_path
+    else
+      current_user.update_attribute(:remember_token,
+                                    User.digest(User.new_remember_token))
+      cookies.delete(:remember_token)
+      self.current_user = nil
+      redirect_to first_path
     end
   end
+end

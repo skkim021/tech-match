@@ -3,6 +3,12 @@ before_action :find_user, only: [:show, :edit, :update, :destroy]
 before_action :signed_in_user, only: [:index, :show, :edit, :update, :destroy]
 before_action :correct_user, only: [:show, :edit, :update, :destroy, :index]
 
+def first
+	if signed_in?
+		redirect_to new_session_path
+	end
+end
+
 def index
 	@users = User.all
 end
@@ -62,6 +68,10 @@ private
 
 	def correct_user
 		find_user
-		redirect_to(current_user) unless current_user?(@user)
+		if fb_signin?
+			redirect_to(current_userf) unless current_userf?(@user)
+		else
+			redirect_to(current_user) unless current_user?(@user)
+		end
 	end
 end
