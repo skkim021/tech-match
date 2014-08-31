@@ -4,4 +4,8 @@
 <h4><%= @profile["description"] %></h4>
 <h4><%= @profile["salary"] %></h4>
 <br>
+
+<%= link_to "Look For #{@profile['name']} Job Openings", jobs_path(@profile["name"]), class: "btn btn-default" %>
+<%= link_to "Browse Other Tech Positions", profiles_path, class: "btn btn-default" %>
+
 </div>

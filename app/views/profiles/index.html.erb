@@ -1,8 +1,6 @@
-
-
 <% @response.each do |r| %>
 <div class="result">
-<%= link_to "Link", profile_path(r["name"].gsub(' ','+')) %>
+<%= link_to "Link", profile_path(r["name"]) %>
 <h3><%= r["name"] %></h3>
 <h4><%= r["description"] %></h4>
 <h4><%= r["salary"] %></h4>

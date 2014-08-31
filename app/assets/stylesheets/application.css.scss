@@ -10,12 +10,22 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require chosen
  *= require_tree .
  *= require_self
  */
 
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
+
+.chosen-container {
+	font-size: 1em;
+}
+
+.chosen-container-single .chosen-single {
+  height: auto;
+}
+
 
 html { 
   background: url("http://cdn1.tnwcdn.com/wp-content/blogs.dir/1/files/2013/12/hipster-millennial-phone.jpg") no-repeat center center fixed; 

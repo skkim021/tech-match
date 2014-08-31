@@ -15,4 +15,6 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require bootstrap
+//= require chosen-jquery
+//= require tests
 //= require_tree .

@@ -4,7 +4,12 @@ class JobsController < ApplicationController
     if signed_in?
       fill_if_empty
       @job = Job.first
-      @response = @job.search_index
+      if params[:format]
+        @job.update_attributes(title: params[:format])
+        @response = @job.adv_search
+      else
+        @response = @job.search_index
+      end
     else
       render 'users/first'
     end
@@ -33,7 +38,6 @@ class JobsController < ApplicationController
     if signed_in?
       fill_if_empty
       @job = Job.first
-      puts "update"
       
       if @job.update_attributes(job_params)
         redirect_to show_job_path

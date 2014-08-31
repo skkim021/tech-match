@@ -6,7 +6,7 @@
 	<p><%= link_to "Edit", edit_user_path %></p>
 	<p><%= link_to "Delete Your Account", delete_user_path, method: :delete, data: { confirm: 'Are you sure?'} %></p>
 	<p><%= link_to "See Jobs Close To Me", jobs_path %></p>
-	<p><%= link_to "Go To My Profile", profiles_path %></p>
+	<p><%= link_to "Go To My Profile", profile_path(@user.result) %></p>
 	<p><%= link_to "Sign Out", sign_out_path , method: "delete" %></p> 
 
 </div>

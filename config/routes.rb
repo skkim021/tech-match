@@ -38,7 +38,8 @@ Rails.application.routes.draw do
   get 'profiles/:name' => 'profiles#show', as: :profile
  
   # Tests
-  resources :tests
+
+  resources :tests, only: [:index, :update]
 
 
  # root 'users#index'

@@ -2,45 +2,8 @@ class TestsController < ApplicationController
 
 	def index
 		if signed_in?
-			@tests = Test.all
-		else
-      		render 'users/first'
-    	end
-	end
-
-	def show
-		if signed_in?
-			@test = Test.find(params[:id])
-		else
-      		render 'users/first'
-    	end
-	end
-
-	def new
-		if signed_in?
-			@test = User.new
-		else
-      		render 'users/first'
-    	end
-	end
-
-	def create
-		if signed_in?
-			@test = Test.new(test_params)
-			if @test.save
-				redirect_to @test
-			else
-				render :new
-			end
-		else
-      		render 'users/first'
-    	end
-
-	end
-
-	def edit
-		if signed_in?
-
+			fill_if_empty
+			@test = Test.first
 		else
       		render 'users/first'
     	end
@@ -48,18 +11,40 @@ class TestsController < ApplicationController
 
 	def update
 		if signed_in?
+			fill_if_empty
+			@test = Test.first
 
+			if @test.update_attributes(test_params)
+				# Calculate result based on answers.
+				# @test.calc_result
+				
+				# Save result to current user.
+				if fb_signin?
+					user = current_userf
+				else
+					user = current_user
+				end
+				user["result"] = @test.result
+				user.save
+
+				# View Test Result
+				redirect_to profile_path(@test.result)
+			else
+				redirect_to 'index'
+			end
 		else
       		render 'users/first'
     	end
 	end
 
-	def destroy
-		if signed_in?
+	private
+		def test_params
+			params.require(:test).permit(:result)
+		end
 
-		else
-      		render 'users/first'
-    	end
-	end
-
+		def fill_if_empty
+			if Test.first.nil?
+				Test.create()
+			end
+		end
 end

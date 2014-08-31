@@ -1,0 +1,10 @@
+<%= form_for @test do |t| %>
+
+	<p>Tech Match Test</p> 
+	<!-- <p><%#= t.text_field :title, :value => "" %></p> -->
+
+	<p><%= t.select :result, options_for_select(["Database Administrator", "Project Manager", "Quality Assurance", "Software Engineer", "Web Developer", "UX/UI Designer"]), { include_blank: true }, { class: 'chosen-select' } %></p>
+
+	<%= t.submit "See My Tech Match" %>
+
+<% end %>
