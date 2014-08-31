@@ -1,13 +1,15 @@
-<%= render "search" %>
-<%= link_to "Advanced Search", edit_job_path %>
+<div class="jobResults">
+	<%= render "search" %>
+	<%= link_to "Advanced Search", edit_job_path %>
 
-<% @response["resultItemList"].each do |r| %>
-<div class="result">
-<h3><%= r["jobTitle"].upcase %></h3>
-<h4><%= r["location"].upcase %></h4>
-<h4><%= r["detailUrl"] %></h4>
-<h4><%= r["company"] %></h4>
-<h4><%= r["date"] %></h4>
-<br>
+	<% @response["resultItemList"].each do |r| %>
+	<div class="result">
+	<h3><%= r["jobTitle"].upcase %></h3>
+	<h4><%= r["location"].upcase %></h4>
+	<h4><%= r["detailUrl"] %></h4>
+	<h4><%= r["company"] %></h4>
+	<h4><%= r["date"] %></h4>
+	<br>
+	</div>
+	<% end %>
 </div>
-<% end %>
