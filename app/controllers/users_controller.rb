@@ -26,9 +26,9 @@ end
 
 def create
 	@user = User.new(user_params)
-	UserMailer.welcome_email(@user.email).deliver
-		
+
 	  if @user.save
+	  	UserMailer.welcome_email(@user.email).deliver
 	    sign_in @user
 	    redirect_to @user
 	  else
