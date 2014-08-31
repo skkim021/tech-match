@@ -1,11 +1,38 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-  <body>
-    <h2><center>Welcome to Tech-Match,  <%= @email %>!</center></h2>
-    <h3 color="black">
-      You have successfully signed up to Tech-Match.com!
-    </h3>
+<head>
+  <!-- <link rel="stylesheet" type="text/css" href="welcome_email.css.scss"> -->
+  <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 
-    <h3 color="black">Thanks for joining and have a great day!</h3>
-  </body>
+<style>
+
+body {
+  background-color:green;
+  }
+	h2 {
+		color: green;
+    font-family: 'Lobster', cursive;
+	}
+
+	h3{
+		color: black;
+	}
+</style>
+
+</head>
+
 </html>
+
+  <body>
+
+    <h2><center>Welcome to Tech-Match,  <%= @email %>!</center>
+    </h2>
+
+    <h3><center>
+      You have successfully signed up to Tech-Match.com!
+    <center></h3>
+
+    <h3><center>You are now one step closer to finding out what ideal technology position matches you.
+    <center></h3>
+
+  </body>
