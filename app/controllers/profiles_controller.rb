@@ -1,7 +1,7 @@
 class ProfilesController < ApplicationController
 
 	def index
-    	# @profiles = Profile.all
+    	@profiles = Profile.all
     	fill_if_empty
     	if signed_in?
     		@response = HTTParty.get "http://tech-profiles.herokuapp.com/profiles.json"

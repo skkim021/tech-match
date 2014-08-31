@@ -1,38 +1,29 @@
 
 
-html { 
-  background: url("http://cdn1.tnwcdn.com/wp-content/blogs.dir/1/files/2013/12/hipster-millennial-phone.jpg") no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+.firstShow {
+  position: relative;
+  z-index: 1;
+  border-radius: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  height: 600px; 
+  width: 400px;
+  background-color: rgba(255,255,255, 0.5);
+  text-align: center;
 }
 
 #title {
 	font-family: 'Ubuntu', sans-serif;
-	font-size: 1000px;
+	font-size: 5em;
 
 }
-@media screen and (min-width: 650px){
-.firstShow {
-	position: fixed;
-	z-index: 1;
-    border-width: 2px;
-    border-radius: 20px;
-  	height: 600px; 
-  	width: 400px; 
-    background-color: rgba(255,255,255, 0.5);
-    margin-left: 420px;
-    margin-top: 50px;
-    text-align: center;
-    }
-}
+
 
 #block {
-	margin-top: 175px;
-	margin-left: 20px;
-	margin-right: 20px;
-	font-size: 20px;
+	margin-top: 20%;
+	margin-left: 20%;
+	margin-right: 20%;
+	font-size: 2em;
 	font-family: 'Abel', sans-serif;
 }
 
@@ -42,14 +33,14 @@ hr {
 
 
 #navlist li{
-display: inline;
-list-style-type: none;
-padding-right: 20px;
-float:right;
-padding:3px;
-margin:3px;
-font-size: 25px;
-font-family: 'Abel', sans-serif;
+  display: inline;
+  list-style-type: none;
+  padding-right: 20px;
+  float:right;
+  padding:3px;
+  margin:3px;
+  font-size: 25px;
+  font-family: 'Abel', sans-serif;
 }
 
 .prof_pic {
@@ -60,12 +51,18 @@ font-family: 'Abel', sans-serif;
 }
 
 #logo1 {
+  width: 100px;
+  height: 100px;
   float: left;
-  border-top-left-radius: 40px;
-  border-bottom-right-radius: 40px;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   box-shadow: 10px 10px 5px ;
   opacity: .8;
 }
 
 
+@media screen and (min-width: 650px){
+  .firstShow {
 
+  }
+}

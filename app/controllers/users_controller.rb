@@ -26,6 +26,7 @@ def create
 	    sign_in @user
 	    redirect_to @user
 	  else
+	  	flash = "Please enter a valid email or 6 letters/numbers long password"
 	     render :new 
 	  end
 end
