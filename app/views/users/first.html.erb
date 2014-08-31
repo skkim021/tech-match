@@ -30,17 +30,18 @@
   		</div>
       <hr/>
       <div id="user-widget">
-  <% if current_user %>
-    Welcome <strong><%= current_user.name %></strong>!
+  <% if current_userf %>
+    Welcome <strong><%= current_userf.name %></strong>!
     <%= link_to "Sign out", signout_path, id: "sign_out" %>
   <% else %>
     <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
+
   <% end %>
 </div>
-<% if current_user %>
+<% if current_userf %>
 <br/>
 
-  <%= image_tag current_user.info["info"]["image"], class: "prof_pic" %>
+  <%= image_tag current_userf.info["info"]["image"], class: "prof_pic" %>
  
 
 <% end %>
