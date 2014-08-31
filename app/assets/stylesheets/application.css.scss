@@ -17,6 +17,23 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 
+html { 
+  background: url("http://cdn1.tnwcdn.com/wp-content/blogs.dir/1/files/2013/12/hipster-millennial-phone.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 body {
 	margin: 30px;
-	}
+	background-color: transparent;
+}
+
+.nav {
+
+}
+
+.pageContent {
+	/*background-color: green;*/
+}

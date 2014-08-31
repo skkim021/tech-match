@@ -1,8 +1,8 @@
 class JobsController < ApplicationController
 
   def index
-    fill_if_empty
     if signed_in?
+      fill_if_empty
       @job = Job.first
       @response = @job.search_index
     else
@@ -11,14 +11,18 @@ class JobsController < ApplicationController
   end
 
   def show
-    fill_if_empty
-    @job = Job.first
-    @response = @job.adv_search
+    if signed_in?
+      fill_if_empty
+      @job = Job.first
+      @response = @job.adv_search
+    else
+      render 'users/first'
+    end
   end
 
   def edit
-    fill_if_empty
   	if signed_in?
+      fill_if_empty
   		@job = Job.first
   	else
   		render 'users/first'
@@ -26,8 +30,8 @@ class JobsController < ApplicationController
   end
 
   def update
-    fill_if_empty
     if signed_in?
+      fill_if_empty
       @job = Job.first
       puts "update"
       

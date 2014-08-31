@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Tmr</title>
+  <title>Tech.Match</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
+	<div class="nav">
+	<img src="http://i.imgur.com/M1CKa09.png" id="logo1" width="200px" height="200px">
+	</div>
 
-<%= yield %>
+	<div class="pageContent">
+		<%= yield %>
+	</div>
 
 </body>
 </html>
